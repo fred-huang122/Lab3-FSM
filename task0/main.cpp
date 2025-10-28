@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 
 int add(int a, int b) { return a + b; }
+int mult(int a, int b) { return a * b; } 
 
 class TestAdd : public ::testing::Test
 {
@@ -26,6 +27,7 @@ TEST_F(TestAdd, AddTest)
 TEST_F(TestAdd, AddTest2)
 {
     // Create a test case here. Maybe fail this to see what happens?
+    EXPECT_EQ(mult(2, 4), 8);
 }
 
 int main(int argc, char **argv)
